@@ -1,10 +1,11 @@
 import unittest
 from decimal import Decimal
 
-import mock
+# import mock  #  py2.x
+from unittest import mock
 
-from db import dal, prep_db
-from app import get_orders_by_customer
+from .db import dal, prep_db
+from .app import get_orders_by_customer
 
 
 class TestApp(unittest.TestCase):

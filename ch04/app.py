@@ -1,8 +1,8 @@
-from db import dal
+from .db import dal
 from sqlalchemy.sql import select
 
 
-def get_orders_by_customer(cust_name, shipped=None, details=False):
+def get_orders_by_customer(cust_name, shipped=None, details=False):  # （客户名，发货标志，细节）
     columns = [dal.orders.c.order_id, dal.users.c.username, dal.users.c.phone]
     joins = dal.users.join(dal.orders)
     if details:

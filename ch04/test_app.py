@@ -2,8 +2,8 @@ import unittest
 
 from decimal import Decimal
 
-from db import dal, prep_db
-from app import get_orders_by_customer
+from .db import dal, prep_db
+from .app import get_orders_by_customer
 
 
 class TestApp(unittest.TestCase):
